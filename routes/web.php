@@ -11,6 +11,10 @@ use App\Models\timetable;
 use App\Models\hotlines;
 use App\Models\User;
 
+if (App::environment('production')) {  
+    URL::forceScheme('https');  
+}
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
